@@ -1,0 +1,307 @@
+/* =============================================
+   Saketh Vadakepat Manakil — Resume Website
+   CSS Stylesheet — Module 5 Assignment
+   ============================================= */
+
+/* --- CSS Variables --- */
+:root {
+  --blue: #2c6fad;
+  --light-blue: #e8f0f7;
+  --dark: #222222;
+  --grey: #666666;
+  --border: #dddddd;
+  --white: #ffffff;
+  --bg: #f5f7fa;
+}
+
+/* --- Element Selectors --- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bg);
+  color: var(--dark);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+h1, h2, h3 {
+  color: var(--dark);
+}
+
+a {
+  color: var(--blue);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+p {
+  color: var(--grey);
+  margin-bottom: 0.8rem;
+}
+
+ul {
+  list-style: none;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* --- ID Selector: Navbar --- */
+#navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--white);
+  border-bottom: 2px solid var(--blue);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5%;
+  height: 60px;
+  z-index: 100;
+}
+
+/* Class Selector */
+.nav-name {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--blue);
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--dark);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.nav-links a:hover {
+  color: var(--blue);
+  text-decoration: none;
+}
+
+/* --- ID Selector: Hero --- */
+#hero {
+  background-color: var(--blue);
+  color: var(--white);
+  text-align: center;
+  padding: 100px 5% 60px;
+  margin-top: 60px;
+}
+
+/* Class Selector: profile photo */
+.profile-photo {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  border: 4px solid var(--white);
+  margin-bottom: 1.2rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#hero h1 {
+  font-size: 2rem;
+  color: var(--white);
+  margin-bottom: 0.5rem;
+}
+
+.tagline {
+  font-size: 1rem;
+  color: #d0e4f5;
+  margin-bottom: 1.5rem;
+}
+
+/* Class Selector: button */
+.btn {
+  display: inline-block;
+  background-color: var(--white);
+  color: var(--blue);
+  font-weight: 700;
+  font-size: 0.88rem;
+  padding: 0.65rem 1.8rem;
+  border-radius: 6px;
+  transition: background-color 0.2s;
+}
+
+.btn:hover {
+  background-color: var(--light-blue);
+  text-decoration: none;
+}
+
+/* --- Sections --- */
+section {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 50px 5%;
+}
+
+section h2 {
+  font-size: 1.4rem;
+  color: var(--blue);
+  border-bottom: 2px solid var(--border);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Alternating section backgrounds — using ID selectors */
+#education, #projects, #hobbies {
+  background-color: var(--white);
+  max-width: 100%;
+  padding: 50px 5%;
+}
+
+#education > *, #projects > *, #hobbies > * {
+  max-width: 860px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Class Selector: card */
+.card {
+  background-color: var(--bg);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--blue);
+  border-radius: 6px;
+  padding: 1.2rem 1.5rem;
+  margin-bottom: 1.2rem;
+}
+
+.card h3 {
+  font-size: 1rem;
+  margin-bottom: 0.2rem;
+}
+
+/* Class Selector */
+.institution {
+  font-size: 0.85rem;
+  color: var(--blue);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+/* --- Skills --- */
+.skills-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 2rem;
+}
+
+/* Class Selector */
+.skill-tag {
+  display: inline-block;
+  background-color: var(--light-blue);
+  color: var(--blue);
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 0.35rem 0.9rem;
+  border-radius: 20px;
+  border: 1px solid #b8d0e8;
+}
+
+.cert-heading {
+  font-size: 1rem;
+  color: var(--dark);
+  margin-bottom: 0.8rem;
+  margin-top: 0.5rem;
+}
+
+/* ID Selector: table */
+#cert-table th {
+  background-color: var(--blue);
+  color: var(--white);
+  text-align: left;
+  padding: 0.7rem 1rem;
+  font-size: 0.85rem;
+}
+
+#cert-table td {
+  padding: 0.65rem 1rem;
+  font-size: 0.88rem;
+  color: var(--grey);
+  border-bottom: 1px solid var(--border);
+}
+
+#cert-table tbody tr:nth-child(even) {
+  background-color: var(--light-blue);
+}
+
+/* --- Hobbies --- */
+.hobbies-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.hobby-item {
+  background-color: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1rem 1.2rem;
+}
+
+.hobby-icon {
+  font-size: 1.5rem;
+  display: block;
+  margin-bottom: 0.4rem;
+}
+
+.hobby-item h3 {
+  font-size: 0.95rem;
+  margin-bottom: 0.3rem;
+}
+
+/* --- Contact --- */
+#contact a {
+  color: var(--blue);
+  font-weight: 600;
+}
+
+/* --- Footer --- */
+footer {
+  background-color: var(--dark);
+  color: #aaaaaa;
+  text-align: center;
+  padding: 1.2rem;
+  font-size: 0.82rem;
+}
+
+/* --- Responsive --- */
+@media (max-width: 600px) {
+  .nav-links {
+    display: none;
+  }
+
+  #hero h1 {
+    font-size: 1.5rem;
+  }
+
+  .hobbies-grid {
+    grid-template-columns: 1fr;
+  }
+}
